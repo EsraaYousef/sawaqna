@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<!-- <html lang="en" dir="ltr"> -->
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="sawaqna" />
+
+    <!-- Search Engine -->
+    <meta name="description" content="description about Sawaqna" />
+    <meta name="image" content="img/logo.svg" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="page title" />
+    <meta name="twitter:description" content="description about Sawaqna" />
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta name="og:title" content="page title" />
+    <meta name="og:description" content="description about Sawaqna" />
+    <meta name="og:type" content="website" />
+
+    <!-- frameworks CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-rtl.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <!-- slick slider -->
+    <link rel="stylesheet" href="css/slick/slick.css" />
+    <link rel="stylesheet" href="css/slick/slick-theme.css" />
+
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <!-- custom style -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Sawaqna</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/popper.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!--start popup-->
+    <div class="popup">
+        <!--start login-model -->
+        <div class="modal fade" id="login-modal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="login-form text-center row">
+                            <div class="col-md-7 right-modal-grid">
+                                <div class="right-modal">
+                                    <h4 class="modal-title main-color">مرحبا</h4>
+                                    <p>سجل دخول الان</p>
+                                    <form class="needs-validation row" novalidate>
+                                        <div class="form-group col-12">
+                                            <input type="tel" class="form-control" placeholder="رقم الجوال" required>
+                                            <div class="invalid-feedback">
+                                                من فضلك أدخل رقم جوال صحيح
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-12">
+                                            <input type="password" class="form-control"
+                                                placeholder="كلمة المرور" required>
+                                            <div class="invalid-feedback">
+                                                من فضلك أدخل كلمة مرور صحيحة
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-12">
+                                            <div class="check-form-div">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" name="remember" class="custom-control-input"
+                                                        id="remmember-pass">
+                                                    <label class="custom-control-label" for="remmember-pass">تذكرني
+                                                    </label>
+                                                </div>
+                                                <a href="#" data-toggle="modal" data-target="#forget-modal"
+                                                    data-dismiss="modal" class="forget-link"><span>هل نسيت كلمة
+                                                        المرور؟</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-main btn-hover full-width-btn">تسجيل
+                                                الدخول</button>
+                                        </div>
+                                        <p class="center">ليس لديك حساب بالفعل
+                                            <a href="#" class="register-modal-open login-text-link" data-toggle="modal"
+                                                data-target="#register-modal" data-dismiss="modal">انشاء حساب جديد</a>
+                                        </p>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-5 left-modal-grid">
+                                <div class="left-modal">
+                                    <img src="img/logo.png" alt="logo" />
+                                    <button type="button" class="btn btn-close" data-dismiss="modal"><i
+                                            class="fa fa-times"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end login-model -->
+
+        <!--start register-model -->
+        <div class="modal fade" id="register-modal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="login-form text-center row">
+                            <div class="col-md-7 right-modal-grid">
+                                <div class="right-modal">
+                                    <h4 class="modal-title main-color">مرحبا</h4>
+                                    <p>قم بالتسجيل في <span class="main-color">سوقنا</span> لتتمكن من اضافة اعلان</p>
+                                    <form class="needs-validation row" novalidate>
+                                        <div class="form-group col-12">
+                                            <input type="tel" class="form-control" placeholder="رقم الجوال" required>
+                                            <div class="invalid-feedback">
+                                                من فضلك أدخل رقم جوال صحيح
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-12">
+                                            <div class="single-select">
+                                                <select name="country" id="country-slc" class="custom-select">
+                                                    <option selected>اختر البلد</option>
+                                                    <option value="2">بلد 2</option>
+                                                    <option value="3">بلد 3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-12">
+                                            <input type="password" class="form-control"
+                                                placeholder="كلمة المرور" required>
+                                            <div class="invalid-feedback">
+                                                من فضلك أدخل كلمة مرور صحيحة
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-12">
+                                            <input type="password" class="form-control"
+                                                placeholder="تأكيد كلمة المرور" required>
+                                            <div class="invalid-feedback">
+                                                من فضلك أدخل كلمة متطابقة
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-main btn-hover full-width-btn">انشاء
+                                                حساب</button>
+                                        </div>
+                                        <p class="center">لديك حساب بالفعل
+                                            <a href="#" class="register-modal-open login-text-link" data-toggle="modal"
+                                                data-target="#login-modal" data-dismiss="modal">تسجيل دخول</a>
+                                        </p>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-5 left-modal-grid">
+                                <div class="left-modal">
+                                    <img src="img/logo.png" alt="logo" />
+                                    <button type="button" class="btn btn-close" data-dismiss="modal"><i
+                                            class="fa fa-times"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end register-model -->
+
+        <!--start login-model -->
+        <div class="modal fade" id="forget-modal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="login-form text-center row">
+                            <div class="col-md-7 right-modal-grid">
+                                <div class="right-modal">
+                                    <h4 class="modal-title main-color">مرحبا</h4>
+                                    <p>استعادة كلمة المرور</p>
+                                    <form class="needs-validation row" novalidate>
+                                        <div class="form-group col-12">
+                                            <input type="tel" class="form-control" placeholder="رقم الجوال" required>
+                                            <div class="invalid-feedback">
+                                                من فضلك أدخل رقم جوال صحيح
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit"
+                                                class="btn btn-main btn-hover full-width-btn">ارسال</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-5 left-modal-grid">
+                                <div class="left-modal">
+                                    <img src="img/logo.png" alt="logo" />
+                                    <button type="button" class="btn btn-close" data-dismiss="modal"><i
+                                            class="fa fa-times"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end popup-->
+
+
+    <!-- loading window -->
+    <div class="loading-window">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <header>
+        <div class="top-header">
+            <div class="container">
+                <div class="grid-lists">
+                    <!-- display only if not logged in -->
+                    <!-- <ul class="list-unstyled right-grid">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#login-modal">
+                                <span class="icon"><i class="fas fa-user"></i></span>
+                                <span class="text">تسجيل دخول</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="icon"><i class="fas fa-globe"></i></span>
+                                <span class="text">العربية</span>
+                            </a>
+                        </li>
+                    </ul> -->
+                    <!-- if logged -->
+                    <ul class="list-unstyled right-grid">
+                        <li>
+                            <a href="profile.html">
+                                <span class="icon"><i class="fas fa-user"></i></span>
+                                <span class="text">اسم المستخدم</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="favourite.html">
+                                <span class="icon"><i class="fas fa-heart"></i></span>
+                                <span class="text">المفضلة</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="messages.html">
+                                <!-- <span class="icon"><i class="fas fa-envelope"></i></span> -->
+                                <!-- unread messages -->
+                                <span class="icon unread mgs"><i class="fas fa-envelope"></i></span>
+                                <span class="text">الرسائل</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="notifications.html">
+                                <!-- <span class="icon"><i class="fas fa-bell"></i></span> -->
+                                <!-- only if unread notifications -->
+                                <span class="icon unread notify"><i class="fas fa-bell"></i></span>
+                                <span class="text">الاشعارات</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="icon"><i class="fas fa-globe"></i></span>
+                                <span class="text">العربية</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="left-grid">
+                        <a href="#"><span class="icon"><i class="fab fa-google-play"></i></span></a>
+                        <a href="#"><span class="icon"><i class="fab fa-apple"></i></span></a>
+                        <span class="text">حمل التطبيق</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar navbar-expand-lg white-bg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo.png" class="img-fluid" alt="img" />
+                </a>
+                <button class="navbar-toggler menu-wrapper collapsed" type="button" data-toggle="collapse"
+                    data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="hamburger-menu"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav main-navbar m-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="category.html">تسويق السيارات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">اجهزة كهربائية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">تسويق عقارات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">مواشي و حيوانات و طيور</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">اثاث</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">خدمات اخرى</a>
+                        </li>
+                    </ul>
+                    <a href="add.html" class="btn btn-main btn-hover hidden-mobile">اضف اعلانك الان</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- start page title -->
+    <section class="page-title">
+        <div class="container">
+            <h3 class="main-title">بياناتي الشخصية</h3>
+        </div>
+    </section>
+    <!-- end page title -->
+
+    <!-- start brands  -->
+    <section class="filter-block all-brands white-bg">
+        <div class="container">
+            <div class="all-profile grey-bg">
+                <div class="row">
+                    <div class="col-md-5 col-lg-4">
+                        <h3 class="title wow fadeInDown">بيانات المستخدم</h3>
+                        <!-- tabs -->
+                        <div class="nav flex-column nav-pills wow fadeInUp" id="v-pills-tab" role="tablist"
+                            aria-orientation="vertical">
+                            <a href="#" class="share-icon" title="مشاركة"><i class="fa fa-share-alt"></i></a>
+                            <div class="user-preview">
+                                <div class="user-avatar">
+                                    <img src="img/dynamic/products/01.png" alt="avatar">
+                                </div>
+                                <h4 class="name">اسم المستخدم</h4>
+                                <!-- if active now -->
+                                <p class="status active">
+                                    <span class="active"></span>
+                                    <span class="text">متصل الان</span>
+                                </p>
+                                <!-- if not active -->
+                                <!-- <p class="status not-active">
+                                    <span class="not-active"></span>
+                                    <span class="text">غير متصل</span>
+                                </p> -->
+                                <p class="membership">
+                                    <span class="text">عضو منذ : </span>
+                                    <span class="time">سنة وثلاث شهور</span>
+                                </p>
+                            </div>
+                            <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
+                                role="tab" aria-controls="v-pills-home" aria-selected="true">الاعلانات</a>
+
+                            <a class="nav-link" id="v-pills-changPass-tab" data-toggle="pill" href="#v-pills-changPass"
+                                role="tab" aria-controls="v-pills-changPass" aria-selected="true">تغيير الرقم السري</a>
+
+                            <a class="nav-link" id="v-pills-changName-tab" data-toggle="pill" href="#v-pills-changName"
+                                role="tab" aria-controls="v-pills-changName" aria-selected="false">تغيير مسمى
+                                العضوية</a>
+
+                            <a class="nav-link" id="v-pills-email-tab" data-toggle="pill" href="#v-pills-email"
+                                role="tab" aria-controls="v-pills-email" aria-selected="false">تحديث البريد
+                                الالكتروني</a>
+
+                            <a class="nav-link" id="v-pills-changNum-tab" data-toggle="pill" href="#v-pills-changNum"
+                                role="tab" aria-controls="v-pills-changNum" aria-selected="false">تغيير رقم الجوال</a>
+
+                            <a class="nav-link" href="commission.html">دفع عمولة الموقع</a>
+
+                            <a class="nav-link" id="v-pills-confirmNum-tab" data-toggle="pill"
+                                href="#v-pills-confirmNum" role="tab" aria-controls="v-pills-confirmNum"
+                                aria-selected="false">وثق الجوال</a>
+
+                            <a class="nav-link logout main-color" id="" href="#">تسجيل خروج</a>
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-lg-8">
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                                aria-labelledby="v-pills-home-tab">
+                                <div class="main-content">
+                                    <div class="title wow fadeInDown">
+                                        <div class="right-grid">
+                                            <h3>الاعلانات</h3>
+                                        </div>
+                                        <div class="left-grid d-flex">
+                                            <div class="round-sh ch-grid">
+                                                <img src="img/dynamic/icons/menu.png" alt="img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row grid-cols wow fadeInUp">
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card sm">
+                                                <div class="card-img-top">
+                                                    <img src="img/dynamic/products/01.png" class=" img-fluid"
+                                                        alt="product img">
+                                                    <div class="card-caption">
+                                                        <div class="inner-caption">
+                                                            <ul class="list-unstyled list-inline">
+                                                                <li class="icon eye">
+                                                                    <a href="item-details.html"
+                                                                        title="مشاهدة الاعلان"><i class="fa fa-eye"></i>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="icon fav">
+                                                                    <span title="أضف الى المفضلة"><i
+                                                                            class="fa fa-heart"></i>
+                                                                    </span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-title"><a href="">سيارة بينلتي حديثة مستعملة
+                                                            خفيف</a></h5>
+                                                    <p class="locate">
+                                                        <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                                                        السعودية - مكة المكرمة
+                                                    </p>
+                                                    <div class="bottom">
+                                                        <p class="owner">
+                                                            <span class="icon"><i class="fas fa-user"></i></span>
+                                                            عمر محمد احمد
+                                                        </p>
+                                                        <p class="time">
+                                                            <span class="icon">
+                                                                <i class="fas fa-clock"></i>
+                                                            </span>
+                                                            منذ دقيقتين
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card sm">
+                                                <div class="card-img-top">
+                                                    <img src="img/dynamic/products/02.png" class=" img-fluid"
+                                                        alt="product img">
+                                                    <div class="card-caption">
+                                                        <div class="inner-caption">
+                                                            <ul class="list-unstyled list-inline">
+                                                                <li class="icon eye">
+                                                                    <a href="item-details.html"
+                                                                        title="مشاهدة الاعلان"><i class="fa fa-eye"></i>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="icon fav">
+                                                                    <span title="أضف الى المفضلة"><i
+                                                                            class="fa fa-heart"></i>
+                                                                    </span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-title"><a href="">سيارة بينلتي حديثة مستعملة
+                                                            خفيف</a></h5>
+                                                    <p class="locate">
+                                                        <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                                                        السعودية - مكة المكرمة
+                                                    </p>
+                                                    <div class="bottom">
+                                                        <p class="owner">
+                                                            <span class="icon"><i class="fas fa-user"></i></span>
+                                                            عمر محمد احمد
+                                                        </p>
+                                                        <p class="time">
+                                                            <span class="icon">
+                                                                <i class="fas fa-clock"></i>
+                                                            </span>
+                                                            منذ دقيقتين
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card sm">
+                                                <div class="card-img-top">
+                                                    <img src="img/dynamic/products/03.png" class=" img-fluid"
+                                                        alt="product img">
+                                                    <div class="card-caption">
+                                                        <div class="inner-caption">
+                                                            <ul class="list-unstyled list-inline">
+                                                                <li class="icon eye">
+                                                                    <a href="item-details.html"
+                                                                        title="مشاهدة الاعلان"><i class="fa fa-eye"></i>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="icon fav">
+                                                                    <span title="أضف الى المفضلة"><i
+                                                                            class="fa fa-heart"></i>
+                                                                    </span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-title"><a href="">سيارة بينلتي حديثة مستعملة
+                                                            خفيف</a></h5>
+                                                    <p class="locate">
+                                                        <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                                                        السعودية - مكة المكرمة
+                                                    </p>
+                                                    <div class="bottom">
+                                                        <p class="owner">
+                                                            <span class="icon"><i class="fas fa-user"></i></span>
+                                                            عمر محمد احمد
+                                                        </p>
+                                                        <p class="time">
+                                                            <span class="icon">
+                                                                <i class="fas fa-clock"></i>
+                                                            </span>
+                                                            منذ دقيقتين
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card sm">
+                                                <div class="card-img-top">
+                                                    <img src="img/dynamic/products/04.png" class=" img-fluid"
+                                                        alt="product img">
+                                                    <div class="card-caption">
+                                                        <div class="inner-caption">
+                                                            <ul class="list-unstyled list-inline">
+                                                                <li class="icon eye">
+                                                                    <a href="item-details.html"
+                                                                        title="مشاهدة الاعلان"><i class="fa fa-eye"></i>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="icon fav">
+                                                                    <span title="أضف الى المفضلة"><i
+                                                                            class="fa fa-heart"></i>
+                                                                    </span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-title"><a href="">سيارة بينلتي حديثة مستعملة
+                                                            خفيف</a></h5>
+                                                    <p class="locate">
+                                                        <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                                                        السعودية - مكة المكرمة
+                                                    </p>
+                                                    <div class="bottom">
+                                                        <p class="owner">
+                                                            <span class="icon"><i class="fas fa-user"></i></span>
+                                                            عمر محمد احمد
+                                                        </p>
+                                                        <p class="time">
+                                                            <span class="icon">
+                                                                <i class="fas fa-clock"></i>
+                                                            </span>
+                                                            منذ دقيقتين
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card sm">
+                                                <div class="card-img-top">
+                                                    <img src="img/dynamic/products/05.png" class=" img-fluid"
+                                                        alt="product img">
+                                                    <div class="card-caption">
+                                                        <div class="inner-caption">
+                                                            <ul class="list-unstyled list-inline">
+                                                                <li class="icon eye">
+                                                                    <a href="item-details.html"
+                                                                        title="مشاهدة الاعلان"><i class="fa fa-eye"></i>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="icon fav">
+                                                                    <span title="أضف الى المفضلة"><i
+                                                                            class="fa fa-heart"></i>
+                                                                    </span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-title"><a href="">سيارة بينلتي حديثة مستعملة
+                                                            خفيف</a></h5>
+                                                    <p class="locate">
+                                                        <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                                                        السعودية - مكة المكرمة
+                                                    </p>
+                                                    <div class="bottom">
+                                                        <p class="owner">
+                                                            <span class="icon"><i class="fas fa-user"></i></span>
+                                                            عمر محمد احمد
+                                                        </p>
+                                                        <p class="time">
+                                                            <span class="icon">
+                                                                <i class="fas fa-clock"></i>
+                                                            </span>
+                                                            منذ دقيقتين
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card sm">
+                                                <div class="card-img-top">
+                                                    <img src="img/dynamic/products/06.png" class=" img-fluid"
+                                                        alt="product img">
+                                                    <div class="card-caption">
+                                                        <div class="inner-caption">
+                                                            <ul class="list-unstyled list-inline">
+                                                                <li class="icon eye">
+                                                                    <a href="item-details.html"
+                                                                        title="مشاهدة الاعلان"><i class="fa fa-eye"></i>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="icon fav">
+                                                                    <span title="أضف الى المفضلة"><i
+                                                                            class="fa fa-heart"></i>
+                                                                    </span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-title"><a href="">سيارة بينلتي حديثة مستعملة
+                                                            خفيف</a></h5>
+                                                    <p class="locate">
+                                                        <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                                                        السعودية - مكة المكرمة
+                                                    </p>
+                                                    <div class="bottom">
+                                                        <p class="owner">
+                                                            <span class="icon"><i class="fas fa-user"></i></span>
+                                                            عمر محمد احمد
+                                                        </p>
+                                                        <p class="time">
+                                                            <span class="icon">
+                                                                <i class="fas fa-clock"></i>
+                                                            </span>
+                                                            منذ دقيقتين
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card sm">
+                                                <div class="card-img-top">
+                                                    <img src="img/dynamic/products/01.png" class=" img-fluid"
+                                                        alt="product img">
+                                                    <div class="card-caption">
+                                                        <div class="inner-caption">
+                                                            <ul class="list-unstyled list-inline">
+                                                                <li class="icon eye">
+                                                                    <a href="item-details.html"
+                                                                        title="مشاهدة الاعلان"><i class="fa fa-eye"></i>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="icon fav">
+                                                                    <span title="أضف الى المفضلة"><i
+                                                                            class="fa fa-heart"></i>
+                                                                    </span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-title"><a href="">سيارة بينلتي حديثة مستعملة
+                                                            خفيف</a></h5>
+                                                    <p class="locate">
+                                                        <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                                                        السعودية - مكة المكرمة
+                                                    </p>
+                                                    <div class="bottom">
+                                                        <p class="owner">
+                                                            <span class="icon"><i class="fas fa-user"></i></span>
+                                                            عمر محمد احمد
+                                                        </p>
+                                                        <p class="time">
+                                                            <span class="icon">
+                                                                <i class="fas fa-clock"></i>
+                                                            </span>
+                                                            منذ دقيقتين
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card sm">
+                                                <div class="card-img-top">
+                                                    <img src="img/dynamic/products/02.png" class=" img-fluid"
+                                                        alt="product img">
+                                                    <div class="card-caption">
+                                                        <div class="inner-caption">
+                                                            <ul class="list-unstyled list-inline">
+                                                                <li class="icon eye">
+                                                                    <a href="item-details.html"
+                                                                        title="مشاهدة الاعلان"><i class="fa fa-eye"></i>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="icon fav">
+                                                                    <span title="أضف الى المفضلة"><i
+                                                                            class="fa fa-heart"></i>
+                                                                    </span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-title"><a href="">سيارة بينلتي حديثة مستعملة
+                                                            خفيف</a></h5>
+                                                    <p class="locate">
+                                                        <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                                                        السعودية - مكة المكرمة
+                                                    </p>
+                                                    <div class="bottom">
+                                                        <p class="owner">
+                                                            <span class="icon"><i class="fas fa-user"></i></span>
+                                                            عمر محمد احمد
+                                                        </p>
+                                                        <p class="time">
+                                                            <span class="icon">
+                                                                <i class="fas fa-clock"></i>
+                                                            </span>
+                                                            منذ دقيقتين
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card sm">
+                                                <div class="card-img-top">
+                                                    <img src="img/dynamic/products/03.png" class=" img-fluid"
+                                                        alt="product img">
+                                                    <div class="card-caption">
+                                                        <div class="inner-caption">
+                                                            <ul class="list-unstyled list-inline">
+                                                                <li class="icon eye">
+                                                                    <a href="item-details.html"
+                                                                        title="مشاهدة الاعلان"><i class="fa fa-eye"></i>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="icon fav">
+                                                                    <span title="أضف الى المفضلة"><i
+                                                                            class="fa fa-heart"></i>
+                                                                    </span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-title"><a href="">سيارة بينلتي حديثة مستعملة
+                                                            خفيف</a></h5>
+                                                    <p class="locate">
+                                                        <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                                                        السعودية - مكة المكرمة
+                                                    </p>
+                                                    <div class="bottom">
+                                                        <p class="owner">
+                                                            <span class="icon"><i class="fas fa-user"></i></span>
+                                                            عمر محمد احمد
+                                                        </p>
+                                                        <p class="time">
+                                                            <span class="icon">
+                                                                <i class="fas fa-clock"></i>
+                                                            </span>
+                                                            منذ دقيقتين
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-changPass" role="tabpanel"
+                                aria-labelledby="v-pills-changPass-tab">
+                                <div class="main-content">
+                                    <div class="title">
+                                        <div class="right-grid">
+                                            <h3>تغيير كلمة المرور</h3>
+                                        </div>
+                                    </div>
+                                    <div class="form-edit white-bg">
+                                        <form action="" class="needs-validation row" novalidate>
+                                            <div class="form-group col-12">
+                                                <input type="password" class="form-control"
+                                                    placeholder="كلمة المرور الحالية" required>
+                                                <div class="invalid-feedback">
+                                                    كلمة المرور الحالية غير صحيحة
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-12">
+                                                <input type="password" class="form-control"
+                                                    placeholder="كلمة المرور الجديدة" required>
+                                                <div class="invalid-feedback">
+                                                    ادخل كلمة مرور صحيحة
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-12">
+                                                <input type="password" class="form-control"
+                                                    placeholder="تأكي كلمة المرور" required>
+                                                <div class="invalid-feedback">
+                                                    ادخل كلمة مرور متطابقة
+                                                </div>
+                                            </div>
+                                            <div class="col-12 center">
+                                                <button type="submit" class="btn btn-main btn-hover full-width-btn">
+                                                    حفظ التغييرات</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-changName" role="tabpanel"
+                                aria-labelledby="v-pills-changName-tab">
+                                <div class="main-content">
+                                    <div class="title">
+                                        <div class="right-grid">
+                                            <h3>تغيير مسمى العضوية</h3>
+                                        </div>
+                                    </div>
+                                    <div class="form-edit white-bg">
+                                        <p class="current-info">
+                                            اسم عضويتك الحالي : <span class="main-color">الاسم الحالي للعضوية</span>
+                                        </p>
+                                        <p class="note">يجب أن يكون لديك عمولات بأكثر من 100 ريال لاستخدام الخدمة</p>
+                                        <form action="" class="needs-validation row" novalidate>
+                                            <div class="form-group col-12">
+                                                <input type="text" class="form-control"
+                                                    placeholder="المسمى الجديد" required>
+                                                <div class="invalid-feedback">
+                                                    يجب ادخال المسمى بطريقة صحيحة
+                                                </div>
+                                            </div>
+                                            <div class="col-12 center">
+                                                <button type="submit" class="btn btn-main btn-hover full-width-btn">
+                                                    حفظ التغييرات</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-email" role="tabpanel"
+                                aria-labelledby="v-pills-email-tab">
+                                <div class="main-content">
+                                    <div class="title">
+                                        <div class="right-grid">
+                                            <h3>تجديث البريد الالكتروني</h3>
+                                        </div>
+                                    </div>
+                                    <div class="form-edit white-bg">
+                                        <p class="current-info">
+                                            بريدك الحالي : <span class="main-color">email@gmail.com</span>
+                                        </p>
+                                        <p class="note">سيتم ارسال رسالة تأكيد الى البريد الجديد وأيضا تنبيه الى رقم جوالك</p>
+                                        <form action="" class="needs-validation row" novalidate>
+                                            <div class="form-group col-12">
+                                                <input type="email" class="form-control"
+                                                    placeholder="البريد الجديد" required>
+                                                <div class="invalid-feedback">
+                                                    يجب ادخال بريد الكتروني صحيح
+                                                </div>
+                                            </div>
+                                            <div class="col-12 center">
+                                                <button type="submit" class="btn btn-main btn-hover full-width-btn">
+                                                    حفظ التغييرات</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-changNum" role="tabpanel"
+                                aria-labelledby="v-pills-changNum-tab">
+                                <div class="main-content">
+                                    <div class="title">
+                                        <div class="right-grid">
+                                            <h3>تغيير رقم الجوال</h3>
+                                        </div>
+                                    </div>
+                                    <div class="form-edit white-bg">
+                                        <p class="current-info">
+                                        رقم الجوال الحالي : <span class="main-color">00966555555555</span>
+                                        </p>
+                                        <p class="note">يجب أن يكون الرقم سعودي</p>
+                                        <form action="" class="needs-validation row" novalidate>
+                                            <div class="form-group col-12">
+                                                <input type="tel" class="form-control"
+                                                    placeholder="رقم الجوال الجديد" required>
+                                                <div class="invalid-feedback">
+                                                    يجب ادخال رقم جوال صحيح
+                                                </div>
+                                            </div>
+                                            <div class="col-12 center">
+                                                <button type="submit" class="btn btn-main btn-hover full-width-btn">
+                                                    حفظ التغييرات</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-confirmNum" role="tabpanel"
+                                aria-labelledby="v-pills-confirmNum-tab">
+                                <div class="main-content">
+                                    <div class="title">
+                                        <div class="right-grid">
+                                            <h3>توثيق رقم الجوال</h3>
+                                        </div>
+                                    </div>
+                                    <div class="form-edit white-bg">
+                                        <p class="current-info">
+                                        رقم الجوال الحالي : <span class="main-color">00966555555555</span>
+                                        </p>
+                                        <p class="note">سيتم ارسال كود التوثيق على رقم جوالك الحالي</p>
+                                        <form action="" class="needs-validation row" novalidate>
+                                            <div class="form-group col-12">
+                                                <input type="tel" class="form-control"
+                                                    placeholder="رقم الجوال الحالي" required>
+                                                <div class="invalid-feedback">
+                                                    يجب ادخال رقم جوال صحيح
+                                                </div>
+                                            </div>
+                                            <div class="col-12 center">
+                                                <button type="submit" class="btn btn-main btn-hover full-width-btn">
+                                                    حفظ التغييرات</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end brands  -->
+
+    <!-- start download -->
+    <section class="download-block">
+        <div class="container">
+            <div class="center">
+                <h3 class="title lg wow fadeInDown">حمل التطبيق الآن</h3>
+                <div class="available-app wow fadeInUp">
+                    <a href="#" class="app-link">
+                        <img src="img/dynamic/icons/google-play.png" class="img-fluid" alt="">
+                    </a>
+                    <a href="#" class="app-link">
+                        <img src="img/dynamic/icons/app-store.png" class="img-fluid" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end download -->
+
+    <!-- start footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-lg-4">
+                    <ul class="list-unstyled links-list">
+                        <li><a href="#">اتصل بنا</a></li>
+                        <li><a href="#">الإعلانات المميزة</a></li>
+                        <li><a href="#">حساب عمولة الموقع</a></li>
+                        <li><a href="#">رسوم الخدمات المكررة</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <ul class="list-unstyled links-list">
+                        <li><a href="#">اتفاقية الاستخدام</a></li>
+                        <li><a href="#">نظام التقييم</a></li>
+                        <li><a href="#">نظام الخصم</a></li>
+                        <li><a href="#">القائمة السوداء</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <ul class="list-unstyled links-list">
+                        <li><a href="#">قائمة السلع والإعلانات الممنوعة</a></li>
+                        <li><a href="#">العودة للنسخة الحالية</a></li>
+                        <li><a href="#">توثيق العضوية و إضافة التراخيص</a></li>
+                        <li><a href="#">عضوية معارض السيارات و مكاتب العقار</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- start copyright -->
+    <section class="copyrights">
+        <div class="container">
+            <p class="center m-0">مؤسسة موقع <a href="">سوقنا</a> للتسويق الإلكتروني</p>
+        </div>
+    </section>
+    <!-- end copyright -->
+
+    <!-- add onnounce only mobile -->
+    <div class="only-mobile add-accounce btn btn-main btn-hover">
+        <i class="fas fa-bullhorn"></i>
+    </div>
+    <!-- add onnounce only mobile -->
+
+    <!-- JavaScript Libraries -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/slick/slick.js"></script>
+    <script src="js/jquery.matchHeight-min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
