@@ -152,7 +152,7 @@
                     font-size: 12px;
                 }
                 h3{
-                    font-size: 14px;
+                    font-size: 13px;
                     &:after {
                         height: 15px;
                     }
@@ -190,18 +190,27 @@
             }
             .grid-cols{
                 &.flex-column {
-                    .col-md-6.col-lg-4 {
+                    .col-md-6.col-lg-4, .col-sm-6.col-md-4.col-lg-3 {
                         .card {
-                            flex-direction: column;
+                            // flex-direction: column;
                             .card-img-top{
                                 width: 100%;
-                                margin-bottom: 15px;
+                                // margin-bottom: 15px;
                             }
                             .card-body {
                                 width: 100%;
-                                padding-right: 0;
+                                padding-right: 10px;
                                 .bottom{
                                     justify-content: space-between;
+                                }
+                            }
+                            &.sm{
+                                .card-title {
+                                    font-size: 12px;
+                                    margin-bottom: 5px;
+                                }
+                                .card-body p {
+                                    font-size: 10px;
                                 }
                             }
                         }
@@ -222,6 +231,7 @@
                                 padding-right: 0;
                                 .bottom{
                                     justify-content: space-between;
+                                    padding-top: 5px;
                                 }
                             }
                         }
@@ -449,9 +459,14 @@
             .card {
                 .card-body{
                     p {
-                        font-size: 12px;
+                        font-size: 10px;
+                        margin-bottom: 5px
                     }
                 }
+            }
+            .grid-cols.flex-column .col-md-6.col-lg-4 .card .card-body .bottom {
+                justify-content: space-between;
+                padding-top: 5px;
             }
         }
     }

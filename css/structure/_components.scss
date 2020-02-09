@@ -283,7 +283,7 @@
                     background-color: $dark-blue;
                     color: $white-color;
                     z-index: 3;
-                    border-radius: $radius 0 0 $radius;
+                    border-radius: 5px 0 0 5px;
                 }
             }
         }
@@ -366,6 +366,9 @@
                 &:hover,
                 &:focus {
                     background-color: $main-color;
+                    a{
+                        color: $white-color;
+                    }
                 }
             }
         }
@@ -540,7 +543,7 @@
 
         .grid-cols {
             &.flex-column {
-                .col-md-6.col-lg-4 {
+                .col-md-6.col-lg-4, .col-sm-6.col-md-4.col-lg-3 {
                     max-width: 100%;
 
                     .card {
@@ -1563,7 +1566,7 @@ footer {
                     color: #728E9F;
                 }
 
-                background-color: #F8FAFC;
+                background-color: #f7f7f7;
             }
         }
     }
