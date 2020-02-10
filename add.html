@@ -28,8 +28,6 @@
     <!-- slick slider -->
     <link rel="stylesheet" href="css/slick/slick.css" />
     <link rel="stylesheet" href="css/slick/slick-theme.css" />
-    <!-- date picker -->
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
 
     <!-- fontawesome css -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
@@ -379,7 +377,7 @@
                                                 <div class="item-preview">
                                                     <img class="img-fluid" id="previewImage01" src="img/dynamic/icons/photo.png"
                                                         alt="your image" />
-                                                    <span class="upload-text">ارفع صورة</span>
+                                                    <span class="upload-text" id="item1">ارفع صورة</span>
                                                 </div>
                                                 <input type='file' id="file01" class="btn-inputfile" accept="image/*" />
                                                 <label for="file01"></label>
@@ -392,7 +390,7 @@
                                                 <div class="item-preview">
                                                     <img class="img-fluid" id="previewImage02" src="img/dynamic/icons/photo.png"
                                                         alt="your image" />
-                                                    <span class="upload-text">ارفع صورة</span>
+                                                    <span class="upload-text" id="item2">ارفع صورة</span>
                                                 </div>
                                                 <input type='file' id="file02" class="btn-inputfile" accept="image/*" />
                                                 <label for="file02"></label>
@@ -405,7 +403,7 @@
                                                 <div class="item-preview">
                                                     <img class="img-fluid" id="previewImage03" src="img/dynamic/icons/photo.png"
                                                         alt="your image" />
-                                                    <span class="upload-text">ارفع صورة</span>
+                                                    <span class="upload-text" id="item3">ارفع صورة</span>
                                                 </div>
                                                 <input type='file' id="file03" class="btn-inputfile" accept="image/*" multiple />
                                                 <label for="file03"></label>
@@ -620,11 +618,11 @@
     </section>
     <!-- end copyright -->
 
-    <!-- add onnounce only mobile -->
-    <div class="only-mobile add-accounce btn btn-main btn-hover">
-        <i class="fas fa-bullhorn"></i>
+    <!-- add item only mobile -->
+    <div class="only-mobile add-item btn btn-main btn-hover">
+        <a href="add.html"><i class="fas fa-bullhorn"></i></a>
     </div>
-    <!-- add onnounce only mobile -->
+    <!-- add item only mobile -->
 
     <!-- JavaScript Libraries -->
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -632,7 +630,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/slick/slick.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
     <script src="js/script.js"></script>
 </body>
 

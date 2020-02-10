@@ -21,8 +21,7 @@ $(document).ready(function () {
     });
 
     $('.add-reply').on('click', function () {
-        $('.form-reply').toggleClass('visible');
-        // $(this).find('.form-reply').toggleClass('visible');
+        $(this).parent().next().toggleClass('visible');
     });
 
 
@@ -84,6 +83,7 @@ function previewFile(input,image) {
   reader.addEventListener("load", function () {
     preview.src = reader.result;
   }, false);
+//   $('.upload-text').fadeOut();
   if (file) {
     reader.readAsDataURL(file);
   }

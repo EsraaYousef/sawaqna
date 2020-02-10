@@ -769,8 +769,8 @@
     }
 }
 
-// add-accounce
-.add-accounce {
+// add-item
+.add-item {
 
     &.btn.btn-hover {
         position: fixed;
@@ -1149,6 +1149,10 @@ footer {
                     &:hover,
                     &:focus {
                         background-color: $main-color;
+
+                        a{
+                            color: $white-color;
+                        }
                     }
                 }
             }
@@ -1179,7 +1183,7 @@ footer {
 
         .comments-block {
             ul {
-                padding: 0 15px;
+                // padding: 0 15px;
             }
 
             .media {
