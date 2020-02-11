@@ -247,6 +247,11 @@
         .single-select {
             min-width: calc(50% - 10px);
             z-index: 2;
+            position: relative;
+
+            &.mt{
+                margin-top: 20px;
+            }
         }
     }
 
@@ -532,10 +537,20 @@
                     text-align: center;
                     border: 1px solid $second-color;
                     cursor: pointer;
+                    color: #728E9F;
+                    font-family: $font-medium;
+                    font-size: 16px;
 
                     img {
                         max-width: 30px;
                         max-height: 30px;
+                    }
+                    &.sm-img{
+                        padding-right: 15px;
+                        text-align: right;
+                        img{
+                            height: 25px;
+                        }
                     }
                 }
             }
@@ -986,6 +1001,27 @@ footer {
         .item-name {
             font-size: 20px;
             color: $black-color;
+        }
+        .item-owner{
+            color: $black-color;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            .owner{
+            font-size: 14px;
+            color: $black-color;
+            font-family: $font-medium;
+            }
+            .time{
+                font-size: 12px;
+                color: $black-color;
+            }
+            .icon{
+                font-size: 13px;
+                color: $main-color;
+                display: inline-block;
+                margin-left: 5px;
+            }
         }
 
         p {

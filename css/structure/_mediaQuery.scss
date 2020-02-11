@@ -124,7 +124,7 @@
             flex-direction: column;
 
             .single-select {
-                min-width: 140px;
+                // min-width: 140px;
 
                 &:not(:last-of-type) {
                     margin-bottom: 15px;
@@ -433,6 +433,10 @@
     }
 
     .filter-bar {
+        .row {
+            width: 100%;
+            margin: auto;
+        }
         .right-grid {
             background-color: transparent;
             flex-direction: row;
@@ -444,7 +448,7 @@
             }
 
             .single-select {
-                width: calc(50% - 10px);
+                // width: calc(50% - 10px);
                 min-width: auto;
                 margin-bottom: 0;
 
@@ -508,6 +512,17 @@
 
                         img {
                             max-height: 20px;
+                        }
+                        &.sm-img {
+                            padding-right: 15px;
+                            width: 42px;
+                            min-width: auto;
+                            padding: 0;
+                            text-align: center !important;
+
+                            .text{
+                                display: none;
+                            }
                         }
                     }
                 }

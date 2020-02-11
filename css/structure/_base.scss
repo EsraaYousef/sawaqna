@@ -21,3 +21,6 @@ ul{
     padding: 0;
     margin: 0;
 }
+.rtl .text-right, [dir=rtl] .text-right {
+    text-align: right!important;
+}
