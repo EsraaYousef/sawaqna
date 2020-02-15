@@ -2578,9 +2578,7 @@ footer {
     width: 100%;
     height: 100%;
     z-index: 9999;
-    background-image: -moz-$main-color;
-    background-image: -webkit-$main-color;
-    background-image: -ms-$main-color;
+    background-color: $main-color;
 
     .lds-ellipsis {
         width: 80px;

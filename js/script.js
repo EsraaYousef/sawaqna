@@ -1,3 +1,14 @@
+// loading window
+$(window).on("load", function() {
+    $("body").css("overflow", "hidden");
+    $(".loading-window")
+      .delay(1000)
+      .fadeOut("slow", function() {
+        $(".loading-window").fadeOut();
+        $("body").css("overflow-y", "auto");
+      });
+  });
+
 $(document).ready(function () {
     'use strict';
 
@@ -175,13 +186,3 @@ function previewFile(input,image) {
   })();
 
 
-// loading window
-$(window).on("load", function() {
-    $("body").css("overflow", "hidden");
-    $(".loading-window")
-      .delay(1000)
-      .fadeOut("slow", function() {
-        $(".loading-window").fadeOut();
-        $("body").css("overflow-y", "auto");
-      });
-  });
