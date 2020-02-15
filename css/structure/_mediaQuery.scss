@@ -53,7 +53,9 @@
             }
         }
     }
-
+    .all-profile .following-list .following-link:not(:last-of-type) {
+        margin-bottom: 10px;
+    }
 
 }
 
@@ -74,6 +76,7 @@
 
     .navbar .nav-item .nav-link {
         color: $white-color;
+        margin-bottom: 10px;
     }
 
     .navbar-collapse {
@@ -389,6 +392,9 @@
     body {
         font-size: 14px;
     }
+    .full-width-btn{
+        width: auto;
+    }
 
     .form-group {
         &:not(:last-of-type) {
@@ -461,7 +467,7 @@
         .left-grid {
             &.search-box.form-group {
                 .search-btn {
-                    width: 80px;
+                    width: 50px;
                 }
 
                 .icon {
@@ -766,7 +772,6 @@
     }
 
     .all-profile .following-list .following-link:not(:last-of-type) {
-        margin-left: 10px;
         margin-left: 0;
         font-size: 13px;
     }
@@ -1110,6 +1115,14 @@
 
     .item-upload {
         margin-bottom: 15px;
+    }
+    .discount-block .border-box .single-block .text {
+        font-size: 13px;
+    }
+    .discount-block .border-box ul {
+        padding-right: 20px;
+        margin-bottom: 10px;
+        font-size: 12px;
     }
 }
 

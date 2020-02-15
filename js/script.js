@@ -26,49 +26,117 @@ $(document).ready(function () {
 
 
     // item slider
-    $('.item-for').slick({
-        rtl: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: false,
-        fade: true,
-        asNavFor: '.item-nav'
-    });
-    $('.item-nav').slick({
-        rtl: true,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        asNavFor: '.item-for',
-        dots: false,
-        arrows: false,
-        centerMode: false,
-        focusOnSelect: true,
-        responsive: [{
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 3,
-                dots: false,
+    var dir = $("html").attr("dir");
+    if (dir == "rtl") {
+        $('.item-for').slick({
+            rtl: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            fade: true,
+            asNavFor: '.item-nav'
+        });
+        $('.item-nav').slick({
+            rtl: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            asNavFor: '.item-for',
+            dots: false,
+            arrows: false,
+            centerMode: false,
+            focusOnSelect: true,
+            responsive: [{
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    dots: false,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    dots: false,
+                }
+            },
+            {
+                breakpoint: 540,
+                settings: {
+                    slidesToShow: 2,
+                    dots: false,
+                }
             }
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-                dots: false,
+            ]
+        });
+    } else {
+        $('.item-for').slick({
+            rtl: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            fade: true,
+            asNavFor: '.item-nav'
+        });
+        $('.item-nav').slick({
+            rtl: false,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            asNavFor: '.item-for',
+            dots: false,
+            arrows: false,
+            centerMode: false,
+            focusOnSelect: true,
+            responsive: [{
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    dots: false,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    dots: false,
+                }
+            },
+            {
+                breakpoint: 540,
+                settings: {
+                    slidesToShow: 2,
+                    dots: false,
+                }
             }
-        },
-        {
-            breakpoint: 540,
-            settings: {
-                slidesToShow: 2,
-                dots: false,
-            }
-        }
-        ]
-    });
+            ]
+        });
+    }
 
 });
+// upload img avatar
+// upload img
+$(document).ready(function() {
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          $("#imagePreview").css(
+            "background-image",
+            "url(" + e.target.result + ")"
+          );
+          $("#imagePreview").hide();
+          $("#imagePreview").fadeIn(650);
+          $('.btn-hidden').css({"display":"block"});
+        //   $('.upload-text').css('display', 'none');
+        };
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+    $("#imageUpload").change(function() {
+      readURL(this);
+    });
+  });
 
 // upload single image
 $(".btn-inputfile").change(function () {
