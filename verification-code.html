@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<!-- <html lang="en" dir="ltr"> -->
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="sawaqna" />
+
+    <!-- Search Engine -->
+    <meta name="description" content="description about Sawaqna" />
+    <meta name="image" content="img/logo.svg" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="page title" />
+    <meta name="twitter:description" content="description about Sawaqna" />
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta name="og:title" content="page title" />
+    <meta name="og:description" content="description about Sawaqna" />
+    <meta name="og:type" content="website" />
+
+    <!-- frameworks CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-rtl.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <!-- slick slider -->
+    <link rel="stylesheet" href="css/slick/slick.css" />
+    <link rel="stylesheet" href="css/slick/slick-theme.css" />
+
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <!-- custom style -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- if english laguage -->
+    <!-- <link rel="stylesheet" href="css/style-ltr.css" /> -->
+
+    <title>Sawaqna</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/popper.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="modal-open">
+
+    <!-- loading window -->
+    <div class="loading-window">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!--start  vereification code -->
+    <section class="p-0 full-height">
+
+        <div class="sm-width center">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="login-form text-center row">
+                            <div class="col-md-7 right-modal-grid">
+                                <div class="right-modal">
+                                    <h4 class="modal-title main-color">مرحبا</h4>
+                                    <p>الرجاء إدخال الرمز الذي تلقيته عبر هاتفهك</p>
+                                    <form action="reset-password.html" class="needs-validation" novalidate>
+                                        <div class="form-group row input-code">
+                                            <div class="col">
+                                                <input type="phone" class="form-control" placeholder="." maxLength="1">
+                                            </div>
+                                            <div class="col">
+                                                <input type="phone" class="form-control" placeholder="." maxLength="1">
+                                            </div>
+                                            <div class="col">
+                                                <input type="phone" class="form-control" placeholder="." maxLength="1">
+                                            </div>
+                                            <div class="col">
+                                                <input type="phone" class="form-control" placeholder="." maxLength="1">
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <button class="btn btn btn-main btn-hover full-width-btn" type="submit" disabled>إعادة
+                                                تعيين كلمة المرور</button>
+                                            <p class="resend-code">لم تحصل على رمز؟<a href=""><b>أعد الإرسال</b></a></p>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="h5 m-0" id="timer"></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-5 left-modal-grid">
+                                <div class="left-modal">
+                                    <a href="index.html">                                    
+                                        <img src="img/logo-white.png" alt="logo" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end vereification code -->
+
+        <!-- start copyright -->
+        <section class="copyrights">
+            <div class="container">
+                <p class="center m-0">مؤسسة موقع <a href="">سوقنا</a> للتسويق الإلكتروني</p>
+            </div>
+        </section>
+        <!-- end copyright -->
+    </section>
+
+    <!-- JavaScript Libraries -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/slick/slick.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        document.getElementById('timer').innerHTML =
+            00 + ":" + 59;
+        startTimer();
+
+        function startTimer() {
+            var presentTime = document.getElementById('timer').innerHTML;
+            var timeArray = presentTime.split(/[:]+/);
+            var m = timeArray[0];
+            var s = checkSecond((timeArray[1] - 1));
+            if (s == 59) {
+                m = m - 1
+            }
+            if (m < 0) {
+                alert('resend code')
+            }
+            document.getElementById('timer').innerHTML =
+                m + ":" + s;
+            console.log(m)
+            setTimeout(startTimer, 1000);
+        }
+
+        function checkSecond(sec) {
+            if (sec < 10 && sec >= 0) {
+                sec = "0" + sec
+            };
+            if (sec < 0) {
+                sec = "59"
+            };
+            return sec;
+        }
+    </script>
+</body>
+
+</html>

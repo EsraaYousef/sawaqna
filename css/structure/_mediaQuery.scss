@@ -589,7 +589,7 @@
 
     .left-modal-grid {
         position: relative;
-        height: 200px;
+        height: 120px;
     }
 
     .left-modal img {
@@ -1123,6 +1123,14 @@
         padding-right: 20px;
         margin-bottom: 10px;
         font-size: 12px;
+    }
+
+    .full-height {
+    
+        .modal-dialog-centered {
+            max-height: unset;
+            width: 90%;
+        }
     }
 }
 

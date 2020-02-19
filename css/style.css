@@ -1958,6 +1958,23 @@ footer {
 .discount-block .gold i {
   color: goldenrod; }
 
+.full-height {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; }
+  .full-height .modal-dialog-centered {
+    max-height: 400px;
+    width: 700px; }
+  .full-height .modal-content {
+    box-shadow: 0px 10px 30px #c4d5df; }
+  .full-height .copyrights {
+    margin-top: auto; }
+  .full-height .input-code .form-control {
+    text-align: center; }
+  .full-height .right-modal-grid .right-modal p.resend-code {
+    margin: 10px 0;
+    font-size: 13px; }
+
 .loading-window {
   position: fixed;
   top: 0;
@@ -2348,7 +2365,7 @@ footer {
 
   .left-modal-grid {
     position: relative;
-    height: 200px; }
+    height: 120px; }
 
   .left-modal img {
     width: 100px; }
@@ -2637,7 +2654,11 @@ footer {
   .discount-block .border-box ul {
     padding-right: 20px;
     margin-bottom: 10px;
-    font-size: 12px; } }
+    font-size: 12px; }
+
+  .full-height .modal-dialog-centered {
+    max-height: unset;
+    width: 90%; } }
 @media (max-width: 575px) {
   .all-profile .nav-link {
     font-size: 11px;

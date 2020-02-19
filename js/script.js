@@ -1,13 +1,3 @@
-// loading window
-$(window).on("load", function() {
-    $("body").css("overflow", "hidden");
-    $(".loading-window")
-      .delay(1000)
-      .fadeOut("slow", function() {
-        $(".loading-window").fadeOut();
-        $("body").css("overflow-y", "auto");
-      });
-  });
 
 $(document).ready(function () {
     'use strict';
@@ -35,6 +25,17 @@ $(document).ready(function () {
         $(this).parent().next().toggleClass('visible');
     });
 
+    //input code
+    $(".input-code input").keyup(function () {
+        if (this.value.length == this.maxLength) {
+          $(this)
+                .parent()
+                .next()
+                .find("input")
+                .focus();
+        }
+    });
+    
 
     // item slider
     var dir = $("html").attr("dir");
@@ -184,5 +185,36 @@ function previewFile(input,image) {
         });
     }, false);
   })();
+  var toValidate = jQuery("input"),
+  valid = false;
+toValidate.keyup(function () {
+  if (jQuery(this).val().length > 0) {
+      jQuery(this).data("valid", true);
+  } else {
+      jQuery(this).data("valid", false);
+  }
+  toValidate.each(function () {
+      if (jQuery(this).data("valid") == true) {
+          valid = true;
+      } else {
+          valid = false;
+      }
+  });
+  if (valid === true) {
+      jQuery("button[type=submit]").prop("disabled", false);
+  } else {
+      jQuery("button[type=submit]").prop("disabled", true);
+  }
+});
 
 
+// loading window
+$(window).on("load", function() {
+    $("body").css("overflow", "hidden");
+    $(".loading-window")
+      .delay(1000)
+      .fadeOut("slow", function() {
+        $(".loading-window").fadeOut();
+        $("body").css("overflow-y", "auto");
+      });
+  });
