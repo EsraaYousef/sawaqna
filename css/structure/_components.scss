@@ -2603,6 +2603,7 @@ footer {
     }
 
     .input-code {
+        flex-direction: row-reverse;
         .form-control {
             text-align: center;
         }

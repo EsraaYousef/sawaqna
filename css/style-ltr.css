@@ -1970,8 +1970,10 @@ footer {
     box-shadow: 0px 10px 30px #c4d5df; }
   .full-height .copyrights {
     margin-top: auto; }
-  .full-height .input-code .form-control {
-    text-align: center; }
+  .full-height .input-code {
+    flex-direction: row-reverse; }
+    .full-height .input-code .form-control {
+      text-align: center; }
   .full-height .right-modal-grid .right-modal p.resend-code {
     margin: 10px 0;
     font-size: 13px; }
